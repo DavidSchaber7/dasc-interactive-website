@@ -37,6 +37,10 @@ h1, h2, h3, .logo, .stat-num, .btn {
 a { color: inherit; text-decoration: none; }
 section { position: relative; z-index: 2; }
 
+/* keyboard focus visibility */
+:focus-visible { outline: 2px solid var(--cyan); outline-offset: 3px; border-radius: 6px; }
+.btn:focus-visible, .nav-cta:focus-visible { outline-offset: 4px; }
+
 /* ============ BACKGROUND ============ */
 #bg-canvas {
   position: fixed; inset: 0; z-index: 0;
@@ -228,6 +232,9 @@ body::before {
 .product-top { display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; }
 .product-icon { width: 58px; height: 58px; border-radius: 15px; display: grid; place-items: center; font-size: 28px;
   box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
+.product-icon-img { background: none; box-shadow: none; overflow: hidden; }
+.product-icon-img img { width: 58px; height: 58px; border-radius: 15px; display: block; object-fit: cover;
+  box-shadow: 0 8px 24px rgba(0,0,0,0.35); }
 .product-tag { font-size: 12px; font-weight: 600; padding: 5px 12px; border-radius: 999px; }
 .product-tag.live { color: #34d399; background: rgba(52,211,153,0.12); border: 1px solid rgba(52,211,153,0.3); }
 .product-tag.soon-tag { color: var(--magenta); background: rgba(217,70,239,0.12); border: 1px solid rgba(217,70,239,0.3); }
@@ -236,9 +243,10 @@ body::before {
 .product-feats { list-style: none; display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
 .product-feats li { font-size: 12.5px; padding: 5px 11px; border-radius: 8px; background: var(--surface-2);
   border: 1px solid var(--border); color: var(--text-dim); }
-.product-actions { display: flex; gap: 18px; flex-wrap: wrap; }
-.card-link { font-weight: 600; font-size: 14.5px; color: var(--cyan); transition: gap .25s, color .25s; }
-.card-link:hover { color: var(--text); }
+.product-actions { display: flex; gap: 10px; flex-wrap: wrap; }
+.card-link { font-weight: 600; font-size: 14.5px; color: var(--cyan); transition: color .25s, background .25s;
+  display: inline-flex; align-items: center; min-height: 44px; padding: 6px 12px; margin: 0 -4px; border-radius: 10px; }
+.card-link:hover { color: var(--text); background: var(--surface-2); }
 .product-card.soon { opacity: .92; }
 
 /* ============ SERVICES ============ */
@@ -286,8 +294,9 @@ body::before {
   background: rgba(7,8,15,0.6); }
 .footer-inner { max-width: var(--maxw); margin: 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 24px; flex-wrap: wrap; }
 .footer-brand { display: flex; align-items: center; gap: 10px; font-family: 'Space Grotesk'; font-weight: 700; font-size: 18px; }
-.footer-links { display: flex; gap: 24px; flex-wrap: wrap; }
-.footer-links a { color: var(--text-dim); font-size: 14.5px; transition: color .25s; }
+.footer-links { display: flex; gap: 8px; flex-wrap: wrap; }
+.footer-links a { color: var(--text-dim); font-size: 14.5px; transition: color .25s;
+  display: inline-flex; align-items: center; min-height: 44px; padding: 0 12px; }
 .footer-links a:hover { color: var(--cyan); }
 .footer-bottom { max-width: var(--maxw); margin: 30px auto 0; padding-top: 24px; border-top: 1px solid var(--border);
   display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; color: var(--text-dim); font-size: 13px; }
