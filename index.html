@@ -3,305 +3,299 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dasc Interactive — Apps & Spiele aus Leidenschaft</title>
-  <meta name="description" content="Dasc Interactive ist ein unabhängiges Studio für Apps & Spiele. Wir entwickeln eigene Produkte wie BQ Prüfung und TinyMinds und realisieren App- und Game-Projekte auf Auftrag." />
-  <meta name="theme-color" content="#07080f" />
+  <title>Dasc Interactive — App- & Game-Studio</title>
+  <meta name="description" content="Dasc Interactive ist ein unabhängiges App- und Game-Studio aus Deutschland. Wir entwickeln eigene Produkte wie BQ Prüfung und TinyMinds und realisieren anspruchsvolle Projekte auf Auftrag." />
+  <meta name="theme-color" content="#0a0a0c" />
 
-  <!-- Open Graph -->
   <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dasc Interactive — Apps & Spiele aus Leidenschaft" />
-  <meta property="og:description" content="Unabhängiges Studio für Apps & Spiele. Eigene Produkte & Auftragsentwicklung." />
+  <meta property="og:title" content="Dasc Interactive — App- & Game-Studio" />
+  <meta property="og:description" content="Unabhängiges App- und Game-Studio aus Deutschland. Eigene Produkte & Auftragsentwicklung." />
   <meta property="og:url" content="https://dasc-interactive.de" />
   <meta property="og:image" content="https://dasc-interactive.de/assets/og-image.png" />
   <meta property="og:image:width" content="1200" />
   <meta property="og:image:height" content="630" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dasc Interactive — Apps & Spiele aus Leidenschaft" />
-  <meta name="twitter:description" content="Unabhängiges Studio für Apps & Spiele. Eigene Produkte & Auftragsentwicklung." />
+  <meta name="twitter:title" content="Dasc Interactive — App- & Game-Studio" />
+  <meta name="twitter:description" content="Unabhängiges App- und Game-Studio aus Deutschland. Eigene Produkte & Auftragsentwicklung." />
   <meta name="twitter:image" content="https://dasc-interactive.de/assets/og-image.png" />
 
   <link rel="icon" href="favicon.svg" type="image/svg+xml" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
-<body>
-  <!-- animated background -->
-  <canvas id="bg-canvas" aria-hidden="true"></canvas>
-  <div class="grid-overlay" aria-hidden="true"></div>
-  <div class="cursor-glow" aria-hidden="true"></div>
-
-  <!-- progress bar -->
-  <div class="scroll-progress" id="scroll-progress" aria-hidden="true"></div>
+<body id="top">
+  <div class="bg-glow" aria-hidden="true"></div>
 
   <!-- NAV -->
   <header class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="#top" class="logo">
-        <span class="logo-mark">&lt;/&gt;</span>
-        <span class="logo-text">Dasc<span class="logo-accent">Interactive</span></span>
+    <div class="container nav-inner">
+      <a href="#top" class="logo" aria-label="Dasc Interactive — Startseite">
+        <span class="logo-mark" aria-hidden="true">
+          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="28" height="28" rx="8" fill="url(#lg)"/>
+            <rect x="8.5" y="8.5" width="11" height="11" rx="3" stroke="white" stroke-opacity="0.9" stroke-width="1.6"/>
+            <circle cx="14" cy="14" r="2.1" fill="white"/>
+            <defs><linearGradient id="lg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#4338ca"/></linearGradient></defs>
+          </svg>
+        </span>
+        <span class="logo-text">Dasc Interactive</span>
       </a>
-      <nav class="nav-links" id="nav-links">
-        <a href="#products">Produkte</a>
-        <a href="#services">Services</a>
+      <nav class="nav-links" id="nav-links" aria-label="Hauptnavigation">
+        <a href="#produkte">Produkte</a>
+        <a href="#leistungen">Leistungen</a>
         <a href="#studio">Studio</a>
-        <a href="#contact" class="nav-cta">Kontakt</a>
+        <a href="#kontakt" class="nav-cta">Kontakt</a>
       </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen">
-        <span></span><span></span><span></span>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
+        <span></span><span></span>
       </button>
     </div>
   </header>
 
-  <main id="top">
+  <main>
     <!-- HERO -->
     <section class="hero">
-      <div class="hero-content">
-        <div class="badge reveal">
-          <span class="badge-dot"></span> Independent App &amp; Game Studio
-        </div>
-        <h1 class="hero-title reveal">
-          Wir bauen <span class="grad-text">Apps</span> &amp;
-          <span class="grad-text grad-text-2">Spiele</span>,<br />
-          die hängen bleiben.
-        </h1>
+      <div class="container hero-inner">
+        <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Unabhängiges App- &amp; Game-Studio</p>
+        <h1 class="hero-title reveal">Apps und Spiele,<br />die <span class="accent">Bestand</span> haben.</h1>
         <p class="hero-sub reveal">
-          Dasc Interactive ist ein unabhängiges Studio aus Deutschland.
-          Wir entwickeln eigene Produkte — und realisieren deine Idee
-          vom ersten Prototyp bis in den App Store.
+          Dasc Interactive ist ein unabhängiges Studio aus Deutschland. Wir entwickeln
+          eigene Produkte und realisieren anspruchsvolle App- und Game-Projekte —
+          von der Idee bis in den Store.
         </p>
         <div class="hero-actions reveal">
-          <a href="#products" class="btn btn-primary magnetic">Produkte ansehen</a>
-          <a href="#contact" class="btn btn-ghost magnetic">Projekt starten</a>
+          <a href="#produkte" class="btn btn-primary">Produkte ansehen</a>
+          <a href="#kontakt" class="btn btn-secondary">Projekt anfragen</a>
         </div>
-
-        <div class="stats reveal">
-          <div class="stat">
-            <span class="stat-num" data-target="3" data-suffix="+">0</span>
-            <span class="stat-label">Eigene Apps</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="100" data-suffix="%">0</span>
-            <span class="stat-label">Made in Germany</span>
-          </div>
-          <div class="stat-divider"></div>
-          <div class="stat">
-            <span class="stat-num" data-target="2">0</span>
-            <span class="stat-label">iOS &amp; Android</span>
-          </div>
+        <div class="hero-meta reveal">
+          <span>2 veröffentlichte Apps</span>
+          <span class="dot">·</span>
+          <span>iOS &amp; Android</span>
+          <span class="dot">·</span>
+          <span>Made in Germany</span>
         </div>
-      </div>
-      <div class="scroll-hint" aria-hidden="true">
-        <span></span> scroll
       </div>
     </section>
 
-    <!-- marquee -->
-    <div class="marquee" aria-hidden="true">
-      <div class="marquee-track">
-        <span>React Native</span><span>•</span><span>Expo</span><span>•</span>
-        <span>Game Design</span><span>•</span><span>UX / UI</span><span>•</span>
-        <span>KI-Integration</span><span>•</span><span>App Store</span><span>•</span>
-        <span>Backend</span><span>•</span><span>Push &amp; Notifications</span><span>•</span>
-        <span>React Native</span><span>•</span><span>Expo</span><span>•</span>
-        <span>Game Design</span><span>•</span><span>UX / UI</span><span>•</span>
-        <span>KI-Integration</span><span>•</span><span>App Store</span><span>•</span>
-        <span>Backend</span><span>•</span><span>Push &amp; Notifications</span><span>•</span>
-      </div>
-    </div>
-
     <!-- PRODUCTS -->
-    <section class="section" id="products">
-      <div class="section-head reveal">
-        <span class="eyebrow">// Unsere Produkte</span>
-        <h2>Apps, die wir selbst gebaut haben</h2>
-        <p>Von der ersten Idee bis zum Release — komplett in-house entwickelt.</p>
-      </div>
+    <section class="section" id="produkte">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label">Produkte</p>
+          <h2>Eigene Apps, vollständig in-house entwickelt</h2>
+        </div>
 
-      <div class="products-grid">
         <!-- BQ Prüfung -->
-        <article class="product-card tilt reveal" style="--glow:#3b82f6;--glow2:#22d3ee;">
-          <div class="card-shine"></div>
-          <div class="product-top">
-            <div class="product-icon product-icon-img"><img src="assets/bq-icon.png" alt="BQ Prüfung App-Icon" width="58" height="58" loading="lazy" /></div>
-            <span class="product-tag live">● Live</span>
+        <article class="work reveal">
+          <div class="work-media">
+            <div class="device">
+              <img src="assets/screens/bq-home.png" alt="Screenshot der BQ Prüfung App – Startbildschirm" loading="lazy" />
+            </div>
           </div>
-          <h3>BQ Prüfung</h3>
-          <p class="product-desc">
-            Die smarte Lern-App zur Prüfungsvorbereitung. Über 5 Fächer,
-            tausende Fragen, Lernstatistiken, Streaks &amp; tägliche Erinnerungen —
-            damit du die Prüfung souverän bestehst.
-          </p>
-          <ul class="product-feats">
-            <li>5 Fachbereiche</li><li>Streaks &amp; Stats</li><li>iOS &amp; Android</li>
-          </ul>
-          <div class="product-actions">
-            <a href="https://bqpruefung.de" target="_blank" rel="noopener" class="card-link">Website →</a>
+          <div class="work-body">
+            <div class="work-top">
+              <img class="work-icon" src="assets/bq-icon.png" alt="" width="44" height="44" loading="lazy" />
+              <span class="status status-live">Verfügbar</span>
+            </div>
+            <h3>BQ Prüfung</h3>
+            <p class="work-cat">Lern-App · Prüfungsvorbereitung</p>
+            <p class="work-desc">
+              Strukturierte Prüfungsvorbereitung über fünf Fachbereiche mit umfangreichem
+              Fragenkatalog, Lernstatistiken und intelligenten Wiederholungen — damit die
+              Vorbereitung messbar und verlässlich wird.
+            </p>
+            <ul class="chips">
+              <li>5 Fachbereiche</li><li>Lernstatistiken</li><li>iOS &amp; Android</li>
+            </ul>
+            <div class="work-links">
+              <a href="https://bqpruefung.de" target="_blank" rel="noopener" class="link-arrow">Zur Website<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </div>
         </article>
 
         <!-- TinyMinds -->
-        <article class="product-card tilt reveal" style="--glow:#e8816e;--glow2:#f5a623;">
-          <div class="card-shine"></div>
-          <div class="product-top">
-            <div class="product-icon product-icon-img"><img src="assets/tinyminds-icon.png" alt="TinyMinds App-Icon" width="58" height="58" loading="lazy" /></div>
-            <span class="product-tag live">● Live</span>
+        <article class="work work-reverse reveal">
+          <div class="work-media">
+            <div class="device">
+              <img src="assets/screens/tinyminds-home.png" alt="Screenshot der TinyMinds App – Startbildschirm" loading="lazy" />
+            </div>
           </div>
-          <h3>TinyMinds</h3>
-          <p class="product-desc">
-            Der warme Begleiter für die ersten Jahre mit deinem Kind.
-            Schlaf, Mahlzeiten und Meilensteine im Blick — plus KI-Chat
-            mit „Mia", die nie schläft.
-          </p>
-          <ul class="product-feats">
-            <li>Baby-Tracking</li><li>KI-Assistentin</li><li>iOS</li>
-          </ul>
-          <div class="product-actions">
-            <a href="https://tiny-minds.de" target="_blank" rel="noopener" class="card-link">Website →</a>
-            <a href="https://apps.apple.com/app/tinyminds/id6761198383" target="_blank" rel="noopener" class="card-link">App Store →</a>
+          <div class="work-body">
+            <div class="work-top">
+              <img class="work-icon" src="assets/tinyminds-icon.png" alt="" width="44" height="44" loading="lazy" />
+              <span class="status status-live">Verfügbar</span>
+            </div>
+            <h3>TinyMinds</h3>
+            <p class="work-cat">Familie · Begleit-App mit KI</p>
+            <p class="work-desc">
+              Ein warmer Begleiter für die ersten Jahre mit dem Kind: Schlaf, Mahlzeiten und
+              Meilensteine im Blick — ergänzt durch eine KI-Assistentin, die jederzeit
+              einfühlsam weiterhilft.
+            </p>
+            <ul class="chips">
+              <li>Tracking</li><li>KI-Assistentin</li><li>iOS</li>
+            </ul>
+            <div class="work-links">
+              <a href="https://tiny-minds.de" target="_blank" rel="noopener" class="link-arrow">Zur Website<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+              <a href="https://apps.apple.com/app/tinyminds/id6761198383" target="_blank" rel="noopener" class="link-arrow">App Store<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+            </div>
           </div>
         </article>
 
-        <!-- Coming soon -->
-        <article class="product-card tilt reveal soon" style="--glow:#a855f7;--glow2:#d946ef;">
-          <div class="card-shine"></div>
-          <div class="product-top">
-            <div class="product-icon" style="background:linear-gradient(135deg,#a855f7,#d946ef);">🎮</div>
-            <span class="product-tag soon-tag">In Arbeit</span>
+        <!-- Next -->
+        <div class="next-card reveal">
+          <div>
+            <span class="status status-soon">In Entwicklung</span>
+            <h3>Ein neues Spiel</h3>
+            <p>Unser nächstes Produkt ist ein mobiles Spiel. Wir nehmen uns die Zeit, es richtig zu machen.</p>
           </div>
-          <h3>Next Game</h3>
-          <p class="product-desc">
-            Unser nächstes Projekt ist ein Spiel — verspielt, fordernd und
-            mit dem typischen Dasc-Twist. Mehr verraten wir bald.
-          </p>
-          <ul class="product-feats">
-            <li>Mobile Game</li><li>Coming soon</li>
-          </ul>
-          <div class="product-actions">
-            <a href="#contact" class="card-link">Updates erhalten →</a>
-          </div>
-        </article>
+          <a href="#kontakt" class="link-arrow">Updates erhalten<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
+        </div>
       </div>
     </section>
 
-    <!-- SERVICES -->
-    <section class="section" id="services">
-      <div class="section-head reveal">
-        <span class="eyebrow">// Was wir für dich tun</span>
-        <h2>Auftragsentwicklung</h2>
-        <p>Du hast eine Idee? Wir bringen sie zum Laufen — sauber, schnell, durchdacht.</p>
+    <!-- LEISTUNGEN -->
+    <section class="section section-alt" id="leistungen">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label">Leistungen</p>
+          <h2>Auftragsentwicklung mit Anspruch</h2>
+          <p class="section-lead">Von der ersten Skizze bis zum laufenden Betrieb — durchdacht, sauber umgesetzt, langfristig betreut.</p>
+        </div>
+        <div class="cap-grid">
+          <div class="cap reveal">
+            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2.5" width="12" height="19" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <h3>App-Entwicklung</h3>
+            <p>Native-feel Apps für iOS und Android aus einer Codebasis — performant, wartbar, store-ready.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="7.5" width="19" height="9" rx="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M7 11v2M6 12h2M15.5 12h.01M18 10.5h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <h3>Game Development</h3>
+            <p>Mobile Games mit durchdachten Mechaniken und sauberem Game-Feel — vom Konzept bis zum Release.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 12.5 12 17l9-4.5M3 17l9 4.5L21 17" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
+            <h3>Produkt &amp; UX-Design</h3>
+            <p>Interfaces, die sich richtig anfühlen — klar strukturiert, konsistent und auf Nutzer optimiert.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.6 4.2 4.4 1.3-4.4 1.3L12 14l-1.6-4.2L6 8.5l4.4-1.3L12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M18 15.5 18.7 18l2.3.7-2.3.7L18 22l-.7-2.6-2.3-.7 2.3-.7.7-2.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
+            <h3>KI-Integration</h3>
+            <p>Sinnvolle KI-Features — Assistenten, Automatisierung und smarte Funktionen, dort wo sie Mehrwert schaffen.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
+            <h3>Backend &amp; Infrastruktur</h3>
+            <p>Skalierbare Backends, Datenbanken, Auth und Push — das Fundament, das zuverlässig läuft.</p>
+          </div>
+          <div class="cap reveal">
+            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3.5 2 5 5.5 5 9 0 1.6-.4 3-1 4H8c-.6-1-1-2.4-1-4 0-3.5 1.5-7 5-9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10" r="1.8" stroke="currentColor" stroke-width="1.5"/><path d="M9 19c-1 .8-1.5 2-1.5 2M15 19c1 .8 1.5 2 1.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
+            <h3>Launch &amp; Betrieb</h3>
+            <p>Store-Einreichung, Updates und laufende Betreuung — wir bleiben auch nach dem Launch an Bord.</p>
+          </div>
+        </div>
       </div>
+    </section>
 
-      <div class="services-grid">
-        <div class="service-card reveal">
-          <div class="service-ico">📱</div>
-          <h3>App-Entwicklung</h3>
-          <p>Native-feel Apps für iOS &amp; Android mit React Native &amp; Expo — eine Codebasis, beide Stores.</p>
+    <!-- APPROACH -->
+    <section class="section">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="label">Vorgehen</p>
+          <h2>Vier Phasen, ein klarer Weg</h2>
         </div>
-        <div class="service-card reveal">
-          <div class="service-ico">🕹️</div>
-          <h3>Game Development</h3>
-          <p>Mobile Games mit durchdachten Mechaniken, Game-Feel und Suchtfaktor — vom Konzept zum Release.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-ico">🎨</div>
-          <h3>UX &amp; UI Design</h3>
-          <p>Interfaces, die sich gut anfühlen. Klar, modern und auf Nutzer optimiert.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-ico">🤖</div>
-          <h3>KI-Integration</h3>
-          <p>Smarte Features mit KI — Chatbots, Assistenten und Automatisierung, sinnvoll eingebaut.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-ico">⚙️</div>
-          <h3>Backend &amp; Infrastruktur</h3>
-          <p>Skalierbare Backends, Datenbanken, Auth &amp; Push — das Fundament, das einfach läuft.</p>
-        </div>
-        <div class="service-card reveal">
-          <div class="service-ico">🚀</div>
-          <h3>Release &amp; Wartung</h3>
-          <p>App-Store-Einreichung, Updates und laufende Betreuung — wir lassen dich nach dem Launch nicht allein.</p>
+        <div class="steps">
+          <div class="step reveal"><span class="step-no">01</span><h3>Konzept</h3><p>Wir verstehen Ziel, Nutzer und Rahmen — und definieren, was wirklich gebaut werden soll.</p></div>
+          <div class="step reveal"><span class="step-no">02</span><h3>Design</h3><p>Struktur, Flows und Interface entstehen früh und greifbar, bevor eine Zeile Code geschrieben wird.</p></div>
+          <div class="step reveal"><span class="step-no">03</span><h3>Entwicklung</h3><p>Saubere, getestete Umsetzung in kurzen Iterationen — mit regelmäßigen, sichtbaren Fortschritten.</p></div>
+          <div class="step reveal"><span class="step-no">04</span><h3>Launch &amp; Betrieb</h3><p>Veröffentlichung in den Stores, Monitoring und Weiterentwicklung — langfristig gedacht.</p></div>
         </div>
       </div>
     </section>
 
     <!-- STUDIO -->
-    <section class="section studio" id="studio">
-      <div class="studio-inner">
-        <div class="studio-text reveal">
-          <span class="eyebrow">// Das Studio</span>
-          <h2>Klein, unabhängig,<br /><span class="grad-text">mit Liebe zum Detail.</span></h2>
-          <p>
-            Dasc Interactive ist ein unabhängiges Studio aus Rust in Deutschland.
-            Hinter der Marke steht <strong>David Schaber</strong> — entwickelt wird
-            nah am Nutzer, ohne Agentur-Overhead und mit echtem Anspruch an Qualität.
+    <section class="section section-alt" id="studio">
+      <div class="container studio-inner">
+        <div class="reveal">
+          <p class="label">Studio</p>
+          <h2>Klein, unabhängig, mit Anspruch an Qualität</h2>
+          <p class="studio-text">
+            Dasc Interactive ist ein unabhängiges Studio aus Rust in Deutschland. Hinter der
+            Marke steht <strong>David Schaber</strong>. Entwickelt wird nah am Nutzer, ohne
+            Agentur-Overhead — mit dem Anspruch, Produkte zu bauen, die wirklich gut sind.
           </p>
-          <p>
-            Wir lieben es, Produkte von der ersten Skizze bis in die Hände der
-            Nutzer zu bringen. Jede unserer Apps entsteht aus dem Wunsch, etwas
-            wirklich Gutes zu bauen — nicht aus dem Wunsch, schnell etwas abzuliefern.
+          <p class="studio-text">
+            Jede unserer Apps entsteht aus dem Wunsch, etwas Bleibendes zu schaffen — nicht
+            aus dem Wunsch, schnell etwas abzuliefern.
           </p>
-          <a href="#contact" class="btn btn-primary magnetic">Lass uns reden</a>
+          <a href="#kontakt" class="btn btn-primary">Zusammenarbeiten</a>
         </div>
-        <div class="studio-visual reveal" aria-hidden="true">
-          <div class="orb"></div>
-          <div class="code-window">
-            <div class="cw-bar"><span></span><span></span><span></span></div>
-            <pre><code><span class="c-key">const</span> studio = {
-  <span class="c-prop">name</span>: <span class="c-str">'Dasc Interactive'</span>,
-  <span class="c-prop">founder</span>: <span class="c-str">'David Schaber'</span>,
-  <span class="c-prop">based</span>: <span class="c-str">'🇩🇪 Germany'</span>,
-  <span class="c-prop">builds</span>: [<span class="c-str">'apps'</span>, <span class="c-str">'games'</span>],
-  <span class="c-prop">shipped</span>: [<span class="c-str">'BQ Prüfung'</span>, <span class="c-str">'TinyMinds'</span>],
-  <span class="c-prop">caffeine</span>: <span class="c-num">Infinity</span>,
-};</code></pre>
-          </div>
+        <div class="facts reveal">
+          <div class="fact"><span class="fact-num">2</span><span class="fact-label">Veröffentlichte Apps</span></div>
+          <div class="fact"><span class="fact-num">iOS<span class="fact-amp"> &amp; </span>Android</span><span class="fact-label">Plattformen</span></div>
+          <div class="fact"><span class="fact-num">100%</span><span class="fact-label">In-house entwickelt</span></div>
+          <div class="fact"><span class="fact-num">DE</span><span class="fact-label">Made in Germany</span></div>
         </div>
       </div>
     </section>
 
     <!-- CONTACT -->
-    <section class="section contact" id="contact">
-      <div class="contact-card reveal">
-        <span class="eyebrow">// Sag Hallo</span>
-        <h2>Bereit für dein nächstes Projekt?</h2>
-        <p>
-          Egal ob App, Spiel oder eine wilde Idee, die noch keinen Namen hat —
-          schreib uns. Wir antworten persönlich.
+    <section class="section" id="kontakt">
+      <div class="container contact-inner reveal">
+        <p class="label">Kontakt</p>
+        <h2>Lassen Sie uns über Ihr Projekt sprechen.</h2>
+        <p class="contact-lead">
+          Ob App, Spiel oder eine frühe Idee — schreiben Sie uns. Wir antworten persönlich,
+          meist innerhalb eines Werktags.
         </p>
-        <a href="mailto:hello@dasc-interactive.de" class="btn btn-primary btn-lg magnetic">
-          hello@dasc-interactive.de
-        </a>
-        <div class="contact-meta">
-          <span>📍 Rust, Deutschland</span>
-          <span>⚡ Antwort meist innerhalb von 24h</span>
-        </div>
+        <a href="mailto:hello@dasc-interactive.de" class="btn btn-primary btn-lg">hello@dasc-interactive.de</a>
+        <p class="contact-loc">Dasc Interactive · Rust, Deutschland</p>
       </div>
     </section>
   </main>
 
   <!-- FOOTER -->
   <footer class="footer">
-    <div class="footer-inner">
+    <div class="container footer-inner">
       <div class="footer-brand">
-        <span class="logo-mark">&lt;/&gt;</span>
-        <span class="logo-text">Dasc<span class="logo-accent">Interactive</span></span>
+        <a href="#top" class="logo">
+          <span class="logo-mark" aria-hidden="true">
+            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <rect width="28" height="28" rx="8" fill="url(#lg2)"/>
+              <rect x="8.5" y="8.5" width="11" height="11" rx="3" stroke="white" stroke-opacity="0.9" stroke-width="1.6"/>
+              <circle cx="14" cy="14" r="2.1" fill="white"/>
+              <defs><linearGradient id="lg2" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#4338ca"/></linearGradient></defs>
+            </svg>
+          </span>
+          <span class="logo-text">Dasc Interactive</span>
+        </a>
+        <p class="footer-tag">App- &amp; Game-Studio aus Deutschland.</p>
       </div>
-      <nav class="footer-links">
-        <a href="#products">Produkte</a>
-        <a href="#services">Services</a>
-        <a href="#studio">Studio</a>
-        <a href="#contact">Kontakt</a>
-        <a href="impressum.html">Impressum</a>
-        <a href="datenschutz.html">Datenschutz</a>
+      <nav class="footer-cols" aria-label="Footer">
+        <div class="footer-col">
+          <span class="footer-h">Seite</span>
+          <a href="#produkte">Produkte</a>
+          <a href="#leistungen">Leistungen</a>
+          <a href="#studio">Studio</a>
+          <a href="#kontakt">Kontakt</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-h">Produkte</span>
+          <a href="https://bqpruefung.de" target="_blank" rel="noopener">BQ Prüfung</a>
+          <a href="https://tiny-minds.de" target="_blank" rel="noopener">TinyMinds</a>
+        </div>
+        <div class="footer-col">
+          <span class="footer-h">Rechtliches</span>
+          <a href="impressum.html">Impressum</a>
+          <a href="datenschutz.html">Datenschutz</a>
+        </div>
       </nav>
     </div>
-    <div class="footer-bottom">
+    <div class="container footer-bottom">
       <span>© <span id="year"></span> Dasc Interactive · David Schaber</span>
-      <span>Made with ⚡ in Germany</span>
+      <span>Rust, Deutschland</span>
     </div>
   </footer>
 
