@@ -1,333 +1,971 @@
-<!DOCTYPE html>
-<html lang="de" class="no-js">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <script>document.documentElement.classList.remove('no-js');document.documentElement.classList.add('js');</script>
-  <title>Dasc Interactive — App- & Game-Studio</title>
-  <link rel="canonical" href="https://dasc-interactive.de/" />
-  <meta name="description" content="Dasc Interactive ist ein unabhängiges App- und Game-Studio aus Deutschland. Wir entwickeln eigene Produkte wie BQ Prüfung und TinyMinds und realisieren anspruchsvolle Projekte auf Auftrag." />
-  <meta name="theme-color" content="#0a0a0c" />
-
-  <meta property="og:type" content="website" />
-  <meta property="og:title" content="Dasc Interactive — App- & Game-Studio" />
-  <meta property="og:description" content="Unabhängiges App- und Game-Studio aus Deutschland. Eigene Produkte & Auftragsentwicklung." />
-  <meta property="og:url" content="https://dasc-interactive.de" />
-  <meta property="og:image" content="https://dasc-interactive.de/assets/og-image.png" />
-  <meta property="og:image:width" content="1200" />
-  <meta property="og:image:height" content="630" />
-  <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Dasc Interactive — App- & Game-Studio" />
-  <meta name="twitter:description" content="Unabhängiges App- und Game-Studio aus Deutschland. Eigene Produkte & Auftragsentwicklung." />
-  <meta name="twitter:image" content="https://dasc-interactive.de/assets/og-image.png" />
-
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-
-  <script type="application/ld+json">
-  {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    "name": "Dasc Interactive",
-    "url": "https://dasc-interactive.de",
-    "logo": "https://dasc-interactive.de/assets/og-image.png",
-    "description": "Unabhängiges App- und Game-Studio aus Deutschland. Eigene Produkte und Auftragsentwicklung.",
-    "email": "hello@dasc-interactive.de",
-    "founder": { "@type": "Person", "name": "David Schaber" },
-    "address": { "@type": "PostalAddress", "addressLocality": "Rust", "addressCountry": "DE" },
-    "sameAs": ["https://bqpruefung.de", "https://tiny-minds.de"]
-  }
-  </script>
-</head>
-<body id="top">
-  <a href="#produkte" class="skip-link">Zum Inhalt springen</a>
-  <div class="bg-glow" aria-hidden="true"></div>
-
-  <!-- NAV -->
-  <header class="nav" id="nav">
-    <div class="container nav-inner">
-      <a href="#top" class="logo" aria-label="Dasc Interactive — Startseite">
-        <span class="logo-mark" aria-hidden="true">
-          <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-            <rect width="28" height="28" rx="8" fill="url(#lg)"/>
-            <rect x="8.5" y="8.5" width="11" height="11" rx="3" stroke="white" stroke-opacity="0.9" stroke-width="1.6"/>
-            <circle cx="14" cy="14" r="2.1" fill="white"/>
-            <defs><linearGradient id="lg" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#4338ca"/></linearGradient></defs>
-          </svg>
-        </span>
-        <span class="logo-text">Dasc Interactive</span>
-      </a>
-      <nav class="nav-links" id="nav-links" aria-label="Hauptnavigation">
-        <a href="#produkte">Produkte</a>
-        <a href="#leistungen">Leistungen</a>
-        <a href="#studio">Studio</a>
-        <a href="#kontakt" class="nav-cta">Kontakt</a>
-      </nav>
-      <button class="nav-toggle" id="nav-toggle" aria-label="Menü öffnen" aria-expanded="false">
-        <span></span><span></span>
+<!doctype html>
+<html lang="de">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dasc Interactive — Unabhängige Apps &amp; Spiele</title>
+    <meta
+      name="description"
+      content="Apps für den Alltag. Spiele für neue Welten. Entdecke BQ Prüfung, TinyMinds, Sandslinger und Dead Air von Dasc Interactive, dem unabhängigen Studio aus Rust."
+    />
+    <meta name="theme-color" content="#f4f2eb" />
+    <link rel="canonical" href="https://dasc-interactive.de/" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:title"
+      content="Dasc Interactive — Kleine Ideen. Große Spielräume."
+    />
+    <meta
+      property="og:description"
+      content="Ein unabhängiges Studio. Vier eigene Projekte. Entdecke unsere Apps und Spiele."
+    />
+    <meta property="og:url" content="https://dasc-interactive.de/" />
+    <meta
+      property="og:image"
+      content="https://dasc-interactive.de/assets/og-studio.png"
+    />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Dasc Interactive — Apps &amp; Spiele" />
+    <meta
+      name="twitter:description"
+      content="BQ Prüfung, TinyMinds, Sandslinger und Dead Air. Unabhängig entwickelt in Deutschland."
+    />
+    <meta
+      name="twitter:image"
+      content="https://dasc-interactive.de/assets/og-studio.png"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="script.js" defer></script>
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        "name": "Dasc Interactive",
+        "url": "https://dasc-interactive.de",
+        "logo": "https://dasc-interactive.de/favicon.svg",
+        "email": "hello@dasc-interactive.de",
+        "founder": { "@type": "Person", "name": "David Schaber" },
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Rust",
+          "addressCountry": "DE"
+        },
+        "sameAs": ["https://bqpruefung.de", "https://tiny-minds.de"]
+      }
+    </script>
+  </head>
+  <body id="top">
+    <a class="skip-link" href="#main">Zum Inhalt springen</a>
+    <header class="nav" id="nav">
+      <div class="container nav-inner">
+        <a class="logo" href="#top" aria-label="Dasc Interactive — Startseite"
+          ><span class="logo-mark" aria-hidden="true">d<span>i</span>.</span
+          ><span>Dasc<br /><span class="logo-sub">Interactive</span></span></a
+        >
+        <nav class="nav-links" id="nav-links" aria-label="Hauptnavigation">
+          <a href="#produkte">Projekte <span>04</span></a
+          ><a href="#leistungen">Was wir machen</a
+          ><a href="#studio">Das Studio</a
+          ><a href="#kontakt" class="nav-cta"
+            >Lass uns reden
+            <span aria-hidden="true"
+              ><svg
+                class="icon icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg></span
+          ></a>
+        </nav>
+        <button
+          class="nav-toggle"
+          id="nav-toggle"
+          aria-controls="nav-links"
+          aria-expanded="false"
+          aria-label="Menü öffnen"
+        >
+          <span></span><span></span>
+        </button>
+      </div>
+    </header>
+    <main id="main">
+      <section class="hero">
+        <div class="container">
+          <div class="hero-top">
+            <p class="eyebrow">
+              <span class="live-dot"></span> Independent digital studio · Rust,
+              DE
+            </p>
+            <span class="edition">Apps / Games / Ideas</span>
+          </div>
+          <div class="hero-heading">
+            <h1>
+              Kleine Ideen.<br />Große <em>Spielräume.</em
+              ><span class="title-dot">*</span>
+            </h1>
+            <div class="hero-aside">
+              <p>
+                Wir bauen Apps, die weiterhelfen.<br />Und Spiele, die dich
+                mitnehmen.<br /><strong
+                  >Eigenständig. Mit Liebe zum Detail.</strong
+                >
+              </p>
+              <a class="text-link" href="#produkte"
+                >Unsere Projekte entdecken
+                <span aria-hidden="true"
+                  ><svg
+                    class="icon icon-arrow icon-down"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 19 19 5M5 5h14v14"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg></span
+              ></a>
+            </div>
+          </div>
+          <div class="showcase" aria-label="Ein Blick in unsere Projekte">
+            <div class="showcase-top">
+              <span><span class="live-dot"></span> Aus dem Studio</span
+              ><span class="showcase-index" id="showcase-index">01 / 04</span>
+            </div>
+            <div class="stage" id="stage" data-project="sandslinger">
+              <div class="stage-copy">
+                <span class="stage-category" id="stage-category"
+                  >Games / Sandslinger</span
+                >
+                <h2 id="stage-title">SAND<br />SLINGER</h2>
+                <p id="stage-description">
+                  Farben verbinden. Sand räumen. Kombos bilden.
+                </p>
+                <a class="stage-link" id="stage-link" href="#sandslinger"
+                  >Projekt entdecken
+                  <span aria-hidden="true"
+                    ><svg
+                      class="icon icon-arrow"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 19 19 5M5 5h14v14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg></span
+                ></a>
+              </div>
+              <div class="stage-art" aria-hidden="true">
+                <img
+                  class="stage-game-art stage-sandslinger"
+                  src="assets/ChatGPT-Bild%202.%20Okt.%202026%2C%2010_40_28.png"
+                  width="1672"
+                  height="941"
+                  alt=""
+                  fetchpriority="high"
+                />
+                <img
+                  class="stage-game-art stage-dead-air"
+                  src="assets/ChatGPT-Bild%202.%20Okt.%202026%2C%2010_44_55.png"
+                  width="1672"
+                  height="941"
+                  alt=""
+                  loading="lazy"
+                />
+                <img
+                  class="stage-phone stage-bq"
+                  src="assets/screens/bq-home.png"
+                  alt=""
+                  width="277"
+                  height="600"
+                /><img
+                  class="stage-phone stage-tiny"
+                  src="assets/screens/tinyminds-home.png"
+                  alt=""
+                  width="277"
+                  height="600"
+                /><span class="art-coordinate">DASC / ORIGINALS</span>
+              </div>
+            </div>
+            <div
+              class="project-switcher"
+              role="group"
+              aria-label="Projekt in der Bühne auswählen"
+            >
+              <button
+                type="button"
+                data-showcase="sandslinger"
+                aria-pressed="true"
+              >
+                <span>01</span> Sandslinger
+                <span class="switch-arrow" aria-hidden="true"
+                  ><svg
+                    class="icon icon-arrow"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 19 19 5M5 5h14v14"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span></button
+              ><button
+                type="button"
+                data-showcase="dead-air"
+                aria-pressed="false"
+              >
+                <span>02</span> Dead Air
+                <span class="switch-arrow" aria-hidden="true"
+                  ><svg
+                    class="icon icon-arrow"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 19 19 5M5 5h14v14"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span></button
+              ><button
+                type="button"
+                data-showcase="bq-pruefung"
+                aria-pressed="false"
+              >
+                <span>03</span> BQ Prüfung
+                <span class="switch-arrow" aria-hidden="true"
+                  ><svg
+                    class="icon icon-arrow"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 19 19 5M5 5h14v14"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span></button
+              ><button
+                type="button"
+                data-showcase="tinyminds"
+                aria-pressed="false"
+              >
+                <span>04</span> TinyMinds
+                <span class="switch-arrow" aria-hidden="true"
+                  ><svg
+                    class="icon icon-arrow"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <path
+                      d="M5 19 19 5M5 5h14v14"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span>
+              </button>
+            </div>
+          </div>
+          <div class="hero-foot">
+            <span>Von der ersten Idee bis zum letzten Feinschliff.</span
+            ><span
+              >Unabhängig entwickelt in Deutschland
+              <span aria-hidden="true"
+                ><svg
+                  class="icon icon-arrow icon-southwest"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg></span
+            ></span>
+          </div>
+        </div>
+      </section>
+      <section class="section projects" id="produkte">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="label">01 / Ausgewählte Projekte</p>
+              <h2>Für den Alltag.<br /><em>Und alles daneben.</em></h2>
+            </div>
+            <p>
+              Prüfungen meistern, Familie begleiten oder in ein Spiel
+              eintauchen. Unsere Projekte haben ihren eigenen Kopf.
+            </p>
+          </div>
+          <div class="project-toolbar">
+            <div class="filters" role="group" aria-label="Projekte filtern">
+              <button type="button" data-filter="all" aria-pressed="true">
+                Alle <span>04</span></button
+              ><button type="button" data-filter="game" aria-pressed="false">
+                Games <span>02</span></button
+              ><button type="button" data-filter="app" aria-pressed="false">
+                Apps <span>02</span>
+              </button>
+            </div>
+            <p
+              class="project-count"
+              id="project-count"
+              role="status"
+              aria-live="polite"
+            >
+              4 Projekte
+            </p>
+          </div>
+          <div class="project-grid" id="project-grid">
+            <article
+              class="project-card game-card"
+              id="sandslinger"
+              data-category="game"
+            >
+              <div class="project-visual sand-visual">
+                <img
+                  class="project-artwork"
+                  src="assets/ChatGPT-Bild%202.%20Okt.%202026%2C%2010_40_28.png"
+                  width="1672"
+                  height="941"
+                  alt="Sandslinger: Farben verbinden, Sand räumen und Kombos bilden"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-info">
+                <div class="project-title-row">
+                  <h3>Sandslinger</h3>
+                  <span class="project-type">Puzzle-Game</span>
+                </div>
+                <p class="project-description">
+                  Deine Kombo. Sein Problem. Verbinde Farben, räume Sand und
+                  bilde starke Ketten.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="text-link"
+                    href="mailto:hello@dasc-interactive.de?subject=Sandslinger"
+                    >Zum Spiel anfragen
+                    <span aria-hidden="true"
+                      ><svg
+                        class="icon icon-arrow"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M5 19 19 5M5 5h14v14"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg></span></a
+                  ><button
+                    class="detail-button"
+                    type="button"
+                    data-detail="sandslinger"
+                    aria-haspopup="dialog"
+                    aria-label="Mehr über Sandslinger"
+                  >
+                    Details <span aria-hidden="true">+</span>
+                  </button>
+                </div>
+                <div class="extended-description" hidden>
+                  <p>
+                    Farben verbinden, Sand räumen und Ketten aufbauen:
+                    Sandslinger bringt bunte Sandpartikel und Kombos zusammen.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article
+              class="project-card game-card"
+              id="dead-air"
+              data-category="game"
+            >
+              <div class="project-visual air-visual">
+                <img
+                  class="project-artwork"
+                  src="assets/ChatGPT-Bild%202.%20Okt.%202026%2C%2010_44_55.png"
+                  width="1672"
+                  height="941"
+                  alt="Dead Air: Retro-Cartoon-Figuren vor einem riesigen Fernseher in einer Bühnenwelt"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-info">
+                <div class="project-title-row">
+                  <h3>Dead Air</h3>
+                  <span class="project-type">Game</span>
+                </div>
+                <p class="project-description">
+                  Retro-Cartoon-Look. Ein Spiel mit eigenem Charakter.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="text-link"
+                    href="mailto:hello@dasc-interactive.de?subject=Dead%20Air"
+                    >Zum Spiel anfragen
+                    <span aria-hidden="true"
+                      ><svg
+                        class="icon icon-arrow"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M5 19 19 5M5 5h14v14"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg></span></a
+                  ><button
+                    class="detail-button"
+                    type="button"
+                    data-detail="dead-air"
+                    aria-haspopup="dialog"
+                    aria-label="Mehr über Dead Air"
+                  >
+                    Details <span aria-hidden="true">+</span>
+                  </button>
+                </div>
+                <div class="extended-description" hidden>
+                  <p>
+                    Du möchtest mehr über Dead Air erfahren? Schreib uns direkt
+                    – wir beantworten deine Fragen zum Spiel persönlich.
+                  </p>
+                </div>
+              </div>
+            </article>
+            <article
+              class="project-card app-card"
+              id="bq-pruefung"
+              data-category="app"
+            >
+              <div class="project-visual bq-visual">
+                <span class="visual-label">Lernen mit Struktur</span>
+                <div class="app-poster-copy">
+                  <img
+                    src="assets/bq-icon.png"
+                    width="64"
+                    height="64"
+                    alt=""
+                    loading="lazy"
+                  /><strong>Dein Ziel.<br />Dein Tempo.</strong
+                  ><span>BQ Prüfung</span>
+                </div>
+                <img
+                  class="app-screen"
+                  src="assets/screens/bq-home.png"
+                  width="277"
+                  height="600"
+                  alt="BQ Prüfung: Übersicht der fünf Fachbereiche"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-info">
+                <div class="project-title-row">
+                  <h3>BQ Prüfung</h3>
+                  <span class="project-type">Lern-App</span>
+                </div>
+                <p class="project-description">
+                  Fünf Fachbereiche. Ein klares Ziel. Strukturierte Vorbereitung
+                  auf deine Industriemeister-Basisqualifikation.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="text-link"
+                    href="https://bqpruefung.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Zur Website
+                    <span aria-hidden="true"
+                      ><svg
+                        class="icon icon-arrow"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M5 19 19 5M5 5h14v14"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg></span></a
+                  ><button
+                    class="detail-button"
+                    type="button"
+                    data-detail="bq-pruefung"
+                    aria-haspopup="dialog"
+                    aria-label="Mehr über BQ Prüfung"
+                  >
+                    Details <span aria-hidden="true">+</span>
+                  </button>
+                </div>
+                <div class="extended-description" hidden>
+                  <p>
+                    Ein umfangreicher Fragenkatalog, Lernstatistiken und
+                    intelligente Wiederholungen helfen dir, deine
+                    Prüfungsvorbereitung zu strukturieren.
+                  </p>
+                  <ul>
+                    <li>Fünf Fachbereiche der Basisqualifikation</li>
+                    <li>Lernfortschritt und Statistiken im Blick</li>
+                    <li>Für iOS und Android</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+            <article
+              class="project-card app-card"
+              id="tinyminds"
+              data-category="app"
+            >
+              <div class="project-visual tiny-visual">
+                <span class="visual-label">Für die kleinen großen Momente</span>
+                <div class="app-poster-copy">
+                  <img
+                    src="assets/tinyminds-icon.png"
+                    width="64"
+                    height="64"
+                    alt=""
+                    loading="lazy"
+                  /><strong>Kleines Leben.<br />Großes Gefühl.</strong
+                  ><span>TinyMinds</span>
+                </div>
+                <img
+                  class="app-screen"
+                  src="assets/screens/tinyminds-home.png"
+                  width="277"
+                  height="600"
+                  alt="TinyMinds: Begleiter für Schlaf, Mahlzeiten und Meilensteine"
+                  loading="lazy"
+                />
+              </div>
+              <div class="project-info">
+                <div class="project-title-row">
+                  <h3>TinyMinds</h3>
+                  <span class="project-type">Familien-App</span>
+                </div>
+                <p class="project-description">
+                  Die ersten Jahre, liebevoll begleitet. Schlaf, Mahlzeiten und
+                  Meilensteine – mit einer KI-Assistentin an deiner Seite.
+                </p>
+                <div class="project-actions">
+                  <a
+                    class="text-link"
+                    href="https://tiny-minds.de"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    >Zur Website
+                    <span aria-hidden="true"
+                      ><svg
+                        class="icon icon-arrow"
+                        viewBox="0 0 24 24"
+                        fill="none"
+                        aria-hidden="true"
+                      >
+                        <path
+                          d="M5 19 19 5M5 5h14v14"
+                          stroke="currentColor"
+                          stroke-width="1.5"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        /></svg></span></a
+                  ><a
+                    class="store-link"
+                    href="https://apps.apple.com/app/tinyminds/id6761198383"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label="TinyMinds im Apple App Store"
+                    >App Store
+                    <svg
+                      class="icon icon-arrow"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      aria-hidden="true"
+                    >
+                      <path
+                        d="M5 19 19 5M5 5h14v14"
+                        stroke="currentColor"
+                        stroke-width="1.5"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      /></svg></a
+                  ><button
+                    class="detail-button"
+                    type="button"
+                    data-detail="tinyminds"
+                    aria-haspopup="dialog"
+                    aria-label="Mehr über TinyMinds"
+                  >
+                    Details <span aria-hidden="true">+</span>
+                  </button>
+                </div>
+                <div class="extended-description" hidden>
+                  <p>
+                    TinyMinds verbindet den Überblick über den Familienalltag
+                    mit einer einfühlsamen KI-Assistentin für deine Fragen.
+                  </p>
+                  <ul>
+                    <li>Schlaf und Mahlzeiten festhalten</li>
+                    <li>Meilensteine begleiten</li>
+                    <li>Für iOS</li>
+                  </ul>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <section class="section services" id="leistungen">
+        <div class="container">
+          <div class="section-heading">
+            <div>
+              <p class="label">02 / Von Idee zu Produkt</p>
+              <h2>Gute Ideen verdienen<br /><em>gute Umsetzung.</em></h2>
+            </div>
+            <p>
+              Wir entwickeln eigene Produkte. Und helfen dir, dein nächstes auf
+              den Weg zu bringen.
+            </p>
+          </div>
+          <div class="service-grid">
+            <article>
+              <span class="service-icon" aria-hidden="true"
+                ><svg
+                  class="icon icon-arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg></span
+              ><span class="service-no">01</span>
+              <h3>Apps &amp; Plattformen</h3>
+              <p>
+                iOS, Android und das Backend dahinter. Klare Interfaces,
+                durchdachte Funktionen und ein zuverlässiges Fundament.
+              </p>
+            </article>
+            <article>
+              <span class="service-icon" aria-hidden="true">✳</span
+              ><span class="service-no">02</span>
+              <h3>Spiele &amp; Erlebnisse</h3>
+              <p>
+                Von der ersten Spielidee bis zum Release. Mit einem Blick für
+                Mechaniken, Atmosphäre und das richtige Game-Feel.
+              </p>
+            </article>
+            <article>
+              <span class="service-icon" aria-hidden="true">⌘</span
+              ><span class="service-no">03</span>
+              <h3>Design &amp; smarte Features</h3>
+              <p>
+                Produktdesign, das sich richtig anfühlt. Und KI dort, wo sie den
+                Alltag tatsächlich einfacher macht.
+              </p>
+            </article>
+          </div>
+          <div class="process">
+            <div>
+              <p class="label">So arbeiten wir</p>
+              <h3>Ein klarer Weg.<br />Gemeinsam mit dir.</h3>
+            </div>
+            <div class="process-list">
+              <details open>
+                <summary>
+                  <span>01</span> Verstehen &amp; planen
+                  <span class="accordion-icon" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Wir sprechen über deine Idee, die Menschen dahinter und das
+                  Ziel. Daraus wird ein Konzept mit klarem Umfang.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  <span>02</span> Gestalten &amp; ausprobieren
+                  <span class="accordion-icon" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Frühe Entwürfe und greifbare Prototypen zeigen, wie sich das
+                  Produkt anfühlt. Feedback fließt direkt ein.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  <span>03</span> Entwickeln &amp; verfeinern
+                  <span class="accordion-icon" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Wir setzen in überschaubaren Schritten um. Du siehst
+                  Fortschritte und kannst die Entwicklung mitgestalten.
+                </p>
+              </details>
+              <details>
+                <summary>
+                  <span>04</span> Veröffentlichen &amp; begleiten
+                  <span class="accordion-icon" aria-hidden="true">+</span>
+                </summary>
+                <p>
+                  Store-Einreichung, Updates und Weiterentwicklung gehören dazu.
+                  Wir bleiben auch nach dem Launch an Bord.
+                </p>
+              </details>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="section studio" id="studio">
+        <div class="container studio-inner">
+          <div class="studio-art" aria-hidden="true">
+            <span class="studio-art-label">Independent by choice.</span>
+            <div class="studio-monogram">d<span>i</span>.</div>
+            <span class="studio-art-foot"
+              >Rust, Deutschland <span>48°16′ N / 7°44′ E</span></span
+            >
+          </div>
+          <div class="studio-copy">
+            <p class="label">03 / Das Studio</p>
+            <h2>Ein eigener Kopf.<br /><em>Viele gute Ideen.</em></h2>
+            <p>
+              Dasc Interactive ist das unabhängige App- und Game-Studio von
+              <strong>David Schaber</strong> aus Rust. Hier entstehen Produkte
+              mit Persönlichkeit – vom nützlichen Alltagsbegleiter bis zum
+              eigenen Spiel.
+            </p>
+            <p>
+              Wir mögen kurze Wege, ehrliches Feedback und den Moment, in dem
+              aus einer Idee etwas wird, das Menschen gerne benutzen.
+            </p>
+            <div class="studio-facts">
+              <div><strong>04</strong><span>Eigene Projekte</span></div>
+              <div><strong>100%</strong><span>Unabhängig</span></div>
+              <div><strong>DE</strong><span>Von hier</span></div>
+            </div>
+            <a class="text-link" href="#kontakt"
+              >Lernen wir uns kennen
+              <span aria-hidden="true"
+                ><svg
+                  class="icon icon-arrow"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  aria-hidden="true"
+                >
+                  <path
+                    d="M5 19 19 5M5 5h14v14"
+                    stroke="currentColor"
+                    stroke-width="1.5"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  /></svg></span
+            ></a>
+          </div>
+        </div>
+      </section>
+      <section class="contact" id="kontakt">
+        <div class="container">
+          <p class="label">04 / Der nächste Schritt</p>
+          <div class="contact-heading">
+            <h2>Eine Idee im Kopf?<br /><em>Lass sie raus.</em></h2>
+            <a
+              class="contact-arrow"
+              href="mailto:hello@dasc-interactive.de"
+              aria-label="E-Mail an Dasc Interactive schreiben"
+              ><svg
+                class="icon icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </div>
+          <div class="contact-bottom">
+            <p>
+              Ob App, Spiel oder eine erste Skizze.<br />Schreib uns – wir
+              antworten persönlich.
+            </p>
+            <div>
+              <a class="contact-email" href="mailto:hello@dasc-interactive.de"
+                >hello@dasc-interactive.de</a
+              ><button
+                class="copy-button"
+                type="button"
+                id="copy-email"
+                aria-label="E-Mail-Adresse kopieren"
+              >
+                Kopieren
+                <span aria-hidden="true"
+                  ><svg
+                    class="icon"
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    aria-hidden="true"
+                  >
+                    <rect
+                      x="8"
+                      y="8"
+                      width="12"
+                      height="12"
+                      rx="2"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                    />
+                    <path
+                      d="M16 8V4H4v12h4"
+                      stroke="currentColor"
+                      stroke-width="1.5"
+                      stroke-linejoin="round"
+                    /></svg
+                ></span></button
+              ><span
+                class="copy-status"
+                id="copy-status"
+                role="status"
+                aria-live="polite"
+              ></span>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <a class="logo" href="#top"
+            ><span class="logo-mark" aria-hidden="true">d<span>i</span>.</span
+            ><span>Dasc<br /><span class="logo-sub">Interactive</span></span></a
+          >
+          <nav aria-label="Produktnavigation">
+            <a href="#sandslinger">Sandslinger</a
+            ><a href="#dead-air">Dead Air</a
+            ><a
+              href="https://bqpruefung.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              >BQ Prüfung
+              <svg
+                class="icon icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg></a
+            ><a
+              href="https://tiny-minds.de"
+              target="_blank"
+              rel="noopener noreferrer"
+              >TinyMinds
+              <svg
+                class="icon icon-arrow"
+                viewBox="0 0 24 24"
+                fill="none"
+                aria-hidden="true"
+              >
+                <path
+                  d="M5 19 19 5M5 5h14v14"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                /></svg
+            ></a>
+          </nav>
+          <a class="back-top" href="#top"
+            >Zurück nach oben
+            <svg
+              class="icon icon-arrow icon-up"
+              viewBox="0 0 24 24"
+              fill="none"
+              aria-hidden="true"
+            >
+              <path
+                d="M5 19 19 5M5 5h14v14"
+                stroke="currentColor"
+                stroke-width="1.5"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              /></svg
+          ></a>
+        </div>
+        <div class="footer-bottom">
+          <span
+            >© <span id="year">2026</span> Dasc Interactive · David
+            Schaber</span
+          ><span>Apps. Games. Mit eigenem Kopf.</span>
+          <nav aria-label="Rechtliches">
+            <a href="impressum.html">Impressum</a
+            ><a href="datenschutz.html">Datenschutz</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <dialog
+      class="product-dialog"
+      id="product-dialog"
+      aria-labelledby="dialog-title"
+    >
+      <button
+        type="button"
+        class="dialog-close"
+        aria-label="Produktdetails schließen"
+      >
+        Schließen <span aria-hidden="true">×</span>
       </button>
-    </div>
-  </header>
-
-  <main>
-    <!-- HERO -->
-    <section class="hero">
-      <div class="container hero-inner">
-        <div class="hero-text">
-          <p class="eyebrow reveal"><span class="eyebrow-dot"></span>Unabhängiges App- &amp; Game-Studio</p>
-          <h1 class="hero-title reveal">Apps und Spiele,<br />die <span class="accent">Bestand</span> haben.</h1>
-          <p class="hero-sub reveal">
-            Dasc Interactive ist ein unabhängiges Studio aus Deutschland. Wir entwickeln
-            eigene Produkte und realisieren anspruchsvolle App- und Game-Projekte —
-            von der Idee bis in den Store.
-          </p>
-          <div class="hero-actions reveal">
-            <a href="#produkte" class="btn btn-primary">Produkte ansehen</a>
-            <a href="#kontakt" class="btn btn-secondary">Projekt anfragen</a>
-          </div>
-          <div class="hero-meta reveal">
-            <span>2 veröffentlichte Apps</span>
-            <span class="dot">·</span>
-            <span>iOS &amp; Android</span>
-            <span class="dot">·</span>
-            <span>Made in Germany</span>
-          </div>
-        </div>
-        <div class="hero-visual reveal" aria-hidden="true">
-          <div class="hero-glow"></div>
-          <div class="hero-phone hero-phone-back">
-            <div class="device"><img src="assets/screens/tinyminds-home.png" alt="" loading="lazy" /></div>
-          </div>
-          <div class="hero-phone hero-phone-front">
-            <div class="device"><img src="assets/screens/bq-home.png" alt="" loading="lazy" /></div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- PRODUCTS -->
-    <section class="section" id="produkte">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="label">Produkte</p>
-          <h2>Eigene Apps, vollständig in-house entwickelt</h2>
-        </div>
-
-        <!-- BQ Prüfung -->
-        <article class="work reveal">
-          <div class="work-media">
-            <div class="device">
-              <img src="assets/screens/bq-home.png" alt="Screenshot der BQ Prüfung App – Startbildschirm" loading="lazy" />
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-top">
-              <img class="work-icon" src="assets/bq-icon.png" alt="" width="44" height="44" loading="lazy" />
-              <span class="status status-live">Verfügbar</span>
-            </div>
-            <h3>BQ Prüfung</h3>
-            <p class="work-cat">Lern-App · Prüfungsvorbereitung</p>
-            <p class="work-desc">
-              Strukturierte Prüfungsvorbereitung über fünf Fachbereiche mit umfangreichem
-              Fragenkatalog, Lernstatistiken und intelligenten Wiederholungen — damit die
-              Vorbereitung messbar und verlässlich wird.
-            </p>
-            <ul class="chips">
-              <li>5 Fachbereiche</li><li>Lernstatistiken</li><li>iOS &amp; Android</li>
-            </ul>
-            <div class="work-links">
-              <a href="https://bqpruefung.de" target="_blank" rel="noopener" class="link-arrow">Zur Website<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- TinyMinds -->
-        <article class="work work-reverse reveal">
-          <div class="work-media">
-            <div class="device">
-              <img src="assets/screens/tinyminds-home.png" alt="Screenshot der TinyMinds App – Startbildschirm" loading="lazy" />
-            </div>
-          </div>
-          <div class="work-body">
-            <div class="work-top">
-              <img class="work-icon" src="assets/tinyminds-icon.png" alt="" width="44" height="44" loading="lazy" />
-              <span class="status status-live">Verfügbar</span>
-            </div>
-            <h3>TinyMinds</h3>
-            <p class="work-cat">Familie · Begleit-App mit KI</p>
-            <p class="work-desc">
-              Ein warmer Begleiter für die ersten Jahre mit dem Kind: Schlaf, Mahlzeiten und
-              Meilensteine im Blick — ergänzt durch eine KI-Assistentin, die jederzeit
-              einfühlsam weiterhilft.
-            </p>
-            <ul class="chips">
-              <li>Tracking</li><li>KI-Assistentin</li><li>iOS</li>
-            </ul>
-            <div class="work-links">
-              <a href="https://tiny-minds.de" target="_blank" rel="noopener" class="link-arrow">Zur Website<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-              <a href="https://apps.apple.com/app/tinyminds/id6761198383" target="_blank" rel="noopener" class="link-arrow">App Store<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M5 3h8v8M13 3 3 13" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-            </div>
-          </div>
-        </article>
-
-        <!-- Next -->
-        <div class="next-card reveal">
-          <div>
-            <span class="status status-soon">In Entwicklung</span>
-            <h3>Ein neues Spiel</h3>
-            <p>Unser nächstes Produkt ist ein mobiles Spiel. Wir nehmen uns die Zeit, es richtig zu machen.</p>
-          </div>
-          <a href="#kontakt" class="link-arrow">Updates erhalten<svg viewBox="0 0 16 16" aria-hidden="true"><path d="M3 8h10M9 4l4 4-4 4" stroke="currentColor" stroke-width="1.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/></svg></a>
-        </div>
-      </div>
-    </section>
-
-    <!-- LEISTUNGEN -->
-    <section class="section section-alt" id="leistungen">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="label">Leistungen</p>
-          <h2>Auftragsentwicklung mit Anspruch</h2>
-          <p class="section-lead">Von der ersten Skizze bis zum laufenden Betrieb — durchdacht, sauber umgesetzt, langfristig betreut.</p>
-        </div>
-        <div class="cap-grid">
-          <div class="cap reveal">
-            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="6" y="2.5" width="12" height="19" rx="2.5" stroke="currentColor" stroke-width="1.5"/><path d="M10.5 18.5h3" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-            <h3>App-Entwicklung</h3>
-            <p>Native-feel Apps für iOS und Android aus einer Codebasis — performant, wartbar, store-ready.</p>
-          </div>
-          <div class="cap reveal">
-            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="2.5" y="7.5" width="19" height="9" rx="4.5" stroke="currentColor" stroke-width="1.5"/><path d="M7 11v2M6 12h2M15.5 12h.01M18 10.5h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-            <h3>Game Development</h3>
-            <p>Mobile Games mit durchdachten Mechaniken und sauberem Game-Feel — vom Konzept bis zum Release.</p>
-          </div>
-          <div class="cap reveal">
-            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3 3 7.5l9 4.5 9-4.5L12 3Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><path d="M3 12.5 12 17l9-4.5M3 17l9 4.5L21 17" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/></svg></span>
-            <h3>Produkt &amp; UX-Design</h3>
-            <p>Interfaces, die sich richtig anfühlen — klar strukturiert, konsistent und auf Nutzer optimiert.</p>
-          </div>
-          <div class="cap reveal">
-            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="m12 3 1.6 4.2 4.4 1.3-4.4 1.3L12 14l-1.6-4.2L6 8.5l4.4-1.3L12 3Z" stroke="currentColor" stroke-width="1.4" stroke-linejoin="round"/><path d="M18 15.5 18.7 18l2.3.7-2.3.7L18 22l-.7-2.6-2.3-.7 2.3-.7.7-2.5Z" stroke="currentColor" stroke-width="1.3" stroke-linejoin="round"/></svg></span>
-            <h3>KI-Integration</h3>
-            <p>Sinnvolle KI-Features — Assistenten, Automatisierung und smarte Funktionen, dort wo sie Mehrwert schaffen.</p>
-          </div>
-          <div class="cap reveal">
-            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><rect x="3" y="4" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/><rect x="3" y="14" width="18" height="6" rx="2" stroke="currentColor" stroke-width="1.5"/><path d="M7 7h.01M7 17h.01" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"/></svg></span>
-            <h3>Backend &amp; Infrastruktur</h3>
-            <p>Skalierbare Backends, Datenbanken, Auth und Push — das Fundament, das zuverlässig läuft.</p>
-          </div>
-          <div class="cap reveal">
-            <span class="cap-ico" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none"><path d="M12 3c3.5 2 5 5.5 5 9 0 1.6-.4 3-1 4H8c-.6-1-1-2.4-1-4 0-3.5 1.5-7 5-9Z" stroke="currentColor" stroke-width="1.5" stroke-linejoin="round"/><circle cx="12" cy="10" r="1.8" stroke="currentColor" stroke-width="1.5"/><path d="M9 19c-1 .8-1.5 2-1.5 2M15 19c1 .8 1.5 2 1.5 2" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/></svg></span>
-            <h3>Launch &amp; Betrieb</h3>
-            <p>Store-Einreichung, Updates und laufende Betreuung — wir bleiben auch nach dem Launch an Bord.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- APPROACH -->
-    <section class="section">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="label">Vorgehen</p>
-          <h2>Vier Phasen, ein klarer Weg</h2>
-        </div>
-        <div class="steps">
-          <div class="step reveal"><span class="step-no">01</span><h3>Konzept</h3><p>Wir verstehen Ziel, Nutzer und Rahmen — und definieren, was wirklich gebaut werden soll.</p></div>
-          <div class="step reveal"><span class="step-no">02</span><h3>Design</h3><p>Struktur, Flows und Interface entstehen früh und greifbar, bevor eine Zeile Code geschrieben wird.</p></div>
-          <div class="step reveal"><span class="step-no">03</span><h3>Entwicklung</h3><p>Saubere, getestete Umsetzung in kurzen Iterationen — mit regelmäßigen, sichtbaren Fortschritten.</p></div>
-          <div class="step reveal"><span class="step-no">04</span><h3>Launch &amp; Betrieb</h3><p>Veröffentlichung in den Stores, Monitoring und Weiterentwicklung — langfristig gedacht.</p></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- STUDIO -->
-    <section class="section section-alt" id="studio">
-      <div class="container studio-inner">
-        <div class="reveal">
-          <p class="label">Studio</p>
-          <h2>Klein, unabhängig, mit Anspruch an Qualität</h2>
-          <p class="studio-text">
-            Dasc Interactive ist ein unabhängiges Studio aus Rust in Deutschland. Hinter der
-            Marke steht <strong>David Schaber</strong>. Entwickelt wird nah am Nutzer, ohne
-            Agentur-Overhead — mit dem Anspruch, Produkte zu bauen, die wirklich gut sind.
-          </p>
-          <p class="studio-text">
-            Jede unserer Apps entsteht aus dem Wunsch, etwas Bleibendes zu schaffen — nicht
-            aus dem Wunsch, schnell etwas abzuliefern.
-          </p>
-          <a href="#kontakt" class="btn btn-primary">Zusammenarbeiten</a>
-        </div>
-        <div class="facts reveal">
-          <div class="fact"><span class="fact-num">2</span><span class="fact-label">Veröffentlichte Apps</span></div>
-          <div class="fact"><span class="fact-num">iOS<span class="fact-amp"> &amp; </span>Android</span><span class="fact-label">Plattformen</span></div>
-          <div class="fact"><span class="fact-num">100%</span><span class="fact-label">In-house entwickelt</span></div>
-          <div class="fact"><span class="fact-num">DE</span><span class="fact-label">Made in Germany</span></div>
-        </div>
-      </div>
-    </section>
-
-    <!-- CONTACT -->
-    <section class="section" id="kontakt">
-      <div class="container contact-inner reveal">
-        <p class="label">Kontakt</p>
-        <h2>Lassen Sie uns über Ihr Projekt sprechen.</h2>
-        <p class="contact-lead">
-          Ob App, Spiel oder eine frühe Idee — schreiben Sie uns. Wir antworten persönlich,
-          meist innerhalb eines Werktags.
-        </p>
-        <a href="mailto:hello@dasc-interactive.de" class="btn btn-primary btn-lg">hello@dasc-interactive.de</a>
-        <p class="contact-loc">Dasc Interactive · Rust, Deutschland</p>
-      </div>
-    </section>
-  </main>
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container footer-inner">
-      <div class="footer-brand">
-        <a href="#top" class="logo">
-          <span class="logo-mark" aria-hidden="true">
-            <svg viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <rect width="28" height="28" rx="8" fill="url(#lg2)"/>
-              <rect x="8.5" y="8.5" width="11" height="11" rx="3" stroke="white" stroke-opacity="0.9" stroke-width="1.6"/>
-              <circle cx="14" cy="14" r="2.1" fill="white"/>
-              <defs><linearGradient id="lg2" x1="0" y1="0" x2="28" y2="28" gradientUnits="userSpaceOnUse"><stop stop-color="#6366f1"/><stop offset="1" stop-color="#4338ca"/></linearGradient></defs>
-            </svg>
-          </span>
-          <span class="logo-text">Dasc Interactive</span>
-        </a>
-        <p class="footer-tag">App- &amp; Game-Studio aus Deutschland.</p>
-      </div>
-      <nav class="footer-cols" aria-label="Footer">
-        <div class="footer-col">
-          <span class="footer-h">Seite</span>
-          <a href="#produkte">Produkte</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#studio">Studio</a>
-          <a href="#kontakt">Kontakt</a>
-        </div>
-        <div class="footer-col">
-          <span class="footer-h">Produkte</span>
-          <a href="https://bqpruefung.de" target="_blank" rel="noopener">BQ Prüfung</a>
-          <a href="https://tiny-minds.de" target="_blank" rel="noopener">TinyMinds</a>
-        </div>
-        <div class="footer-col">
-          <span class="footer-h">Rechtliches</span>
-          <a href="impressum.html">Impressum</a>
-          <a href="datenschutz.html">Datenschutz</a>
-        </div>
-      </nav>
-    </div>
-    <div class="container footer-bottom">
-      <span>© <span id="year"></span> Dasc Interactive · David Schaber</span>
-      <span>Rust, Deutschland</span>
-    </div>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
+      <div id="dialog-content"></div>
+    </dialog>
+  </body>
 </html>

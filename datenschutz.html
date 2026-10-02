@@ -1,56 +1,126 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="de">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Datenschutz — Dasc Interactive</title>
-  <meta name="robots" content="noindex" />
-  <link rel="icon" href="favicon.svg" type="image/svg+xml" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="styles.css" />
-  <style>
-    .legal { max-width: 720px; margin: 0 auto; padding: 140px 28px 100px; position: relative; z-index: 2; }
-    .legal h1 { font-size: clamp(2rem,5vw,2.7rem); margin-bottom: 10px; }
-    .legal h2 { font-size: 1.15rem; margin: 36px 0 8px; color: var(--text); }
-    .legal p { color: var(--text-2); margin-bottom: 8px; }
-    .legal a { color: var(--accent-hover); }
-    .legal .intro { margin-bottom: 24px; color: var(--text-3); }
-    .back { display: inline-flex; align-items: center; gap: 8px; color: var(--text-2); margin-bottom: 36px; font-size: 14.5px; font-weight: 500; transition: color .2s; }
-    .back:hover { color: var(--text); }
-  </style>
-</head>
-<body>
-  <div class="bg-glow" aria-hidden="true"></div>
-  <div class="legal">
-    <a href="index.html" class="back">← Zurück zur Startseite</a>
-    <h1>Datenschutzerklärung</h1>
-    <p class="intro">Wir nehmen den Schutz deiner Daten ernst. Diese Erklärung informiert dich über die Verarbeitung personenbezogener Daten beim Besuch dieser Website.</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Datenschutz — Dasc Interactive</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+    <style>
+      .legal {
+        max-width: 720px;
+        margin: 0 auto;
+        padding: 140px 28px 100px;
+        position: relative;
+        z-index: 2;
+      }
+      .legal h1 {
+        font-size: clamp(2rem, 5vw, 2.7rem);
+        margin-bottom: 10px;
+      }
+      .legal h2 {
+        font-size: 1.15rem;
+        margin: 36px 0 8px;
+        color: var(--text);
+      }
+      .legal p {
+        color: var(--text-2);
+        margin-bottom: 8px;
+      }
+      .legal a {
+        color: var(--accent-hover);
+      }
+      .legal .intro {
+        margin-bottom: 24px;
+        color: var(--text-3);
+      }
+      .back {
+        display: inline-flex;
+        align-items: center;
+        gap: 8px;
+        color: var(--text-2);
+        margin-bottom: 36px;
+        font-size: 14.5px;
+        font-weight: 500;
+        transition: color 0.2s;
+      }
+      .back:hover {
+        color: var(--text);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <div class="legal">
+      <a href="index.html" class="back">← Zurück zur Startseite</a>
+      <h1>Datenschutzerklärung</h1>
+      <p class="intro">
+        Wir nehmen den Schutz deiner Daten ernst. Diese Erklärung informiert
+        dich über die Verarbeitung personenbezogener Daten beim Besuch dieser
+        Website.
+      </p>
 
-    <h2>1. Verantwortlicher</h2>
-    <p>Dasc Interactive<br />David Schaber<br />Hanfweg 4, 77977 Rust, Deutschland<br />E-Mail: <a href="mailto:hello@dasc-interactive.de">hello@dasc-interactive.de</a></p>
+      <h2>1. Verantwortlicher</h2>
+      <p>
+        Dasc Interactive<br />David Schaber<br />Hanfweg 4, 77977 Rust,
+        Deutschland<br />E-Mail:
+        <a href="mailto:hello@dasc-interactive.de">hello@dasc-interactive.de</a>
+      </p>
 
-    <h2>2. Hosting</h2>
-    <p>Diese Website wird bei der STRATO AG, Pascalstraße 10, 10587 Berlin, gehostet. Beim Aufruf der Website werden durch den Hoster automatisch Informationen (Server-Logfiles) erfasst und gespeichert, die dein Browser übermittelt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO (berechtigtes Interesse an einem sicheren, stabilen Betrieb).</p>
+      <h2>2. Hosting</h2>
+      <p>
+        Diese Website wird bei der STRATO AG, Pascalstraße 10, 10587 Berlin,
+        gehostet. Beim Aufruf der Website werden durch den Hoster automatisch
+        Informationen (Server-Logfiles) erfasst und gespeichert, die dein
+        Browser übermittelt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO
+        (berechtigtes Interesse an einem sicheren, stabilen Betrieb).
+      </p>
 
-    <h2>3. Server-Logfiles</h2>
-    <p>Erfasst werden insbesondere: Browsertyp und -version, verwendetes Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners, Uhrzeit der Serveranfrage und IP-Adresse. Diese Daten werden nicht mit anderen Datenquellen zusammengeführt und dienen ausschließlich der technischen Bereitstellung und Sicherheit.</p>
+      <h2>3. Server-Logfiles</h2>
+      <p>
+        Erfasst werden insbesondere: Browsertyp und -version, verwendetes
+        Betriebssystem, Referrer-URL, Hostname des zugreifenden Rechners,
+        Uhrzeit der Serveranfrage und IP-Adresse. Diese Daten werden nicht mit
+        anderen Datenquellen zusammengeführt und dienen ausschließlich der
+        technischen Bereitstellung und Sicherheit.
+      </p>
 
-    <h2>4. Kontaktaufnahme</h2>
-    <p>Wenn du uns per E-Mail kontaktierst, werden deine Angaben zur Bearbeitung der Anfrage gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1 lit. b bzw. lit. f DSGVO. Die Daten werden gelöscht, sobald sie nicht mehr erforderlich sind.</p>
+      <h2>4. Kontaktaufnahme</h2>
+      <p>
+        Wenn du uns per E-Mail kontaktierst, werden deine Angaben zur
+        Bearbeitung der Anfrage gespeichert. Rechtsgrundlage ist Art. 6 Abs. 1
+        lit. b bzw. lit. f DSGVO. Die Daten werden gelöscht, sobald sie nicht
+        mehr erforderlich sind.
+      </p>
 
-    <h2>5. Cookies &amp; Tracking</h2>
-    <p>Diese Website verwendet keine Cookies und keine Analyse- oder Tracking-Dienste. Es werden lediglich Schriftarten von Google Fonts geladen (siehe nächster Punkt).</p>
+      <h2>5. Cookies &amp; Tracking</h2>
+      <p>
+        Diese Website verwendet keine Cookies und keine Analyse- oder
+        Tracking-Dienste. Die Darstellung verwendet lokal verfügbare
+        Systemschriften.
+      </p>
 
-    <h2>6. Google Fonts</h2>
-    <p>Zur einheitlichen Darstellung von Schriftarten werden Schriften von Google (Google Ireland Limited) geladen. Beim Aufruf wird deine IP-Adresse an Google übertragen. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO. Weitere Informationen: <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">policies.google.com/privacy</a>.</p>
+      <h2>6. Schriftarten</h2>
+      <p>
+        Diese Website verwendet Systemschriften, die bereits auf deinem Gerät
+        verfügbar sind. Es werden keine Schriftarten von externen Anbietern
+        geladen.
+      </p>
 
-    <h2>7. Deine Rechte</h2>
-    <p>Du hast jederzeit das Recht auf Auskunft (Art. 15), Berichtigung (Art. 16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18), Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21 DSGVO). Zudem steht dir ein Beschwerderecht bei einer Aufsichtsbehörde zu.</p>
+      <h2>7. Deine Rechte</h2>
+      <p>
+        Du hast jederzeit das Recht auf Auskunft (Art. 15), Berichtigung (Art.
+        16), Löschung (Art. 17), Einschränkung der Verarbeitung (Art. 18),
+        Datenübertragbarkeit (Art. 20) sowie Widerspruch (Art. 21 DSGVO). Zudem
+        steht dir ein Beschwerderecht bei einer Aufsichtsbehörde zu.
+      </p>
 
-    <h2>8. Aktualität</h2>
-    <p>Diese Datenschutzerklärung ist aktuell gültig. Durch die Weiterentwicklung der Website kann es notwendig werden, sie anzupassen.</p>
-  </div>
-</body>
+      <h2>8. Aktualität</h2>
+      <p>
+        Diese Datenschutzerklärung ist aktuell gültig. Durch die
+        Weiterentwicklung der Website kann es notwendig werden, sie anzupassen.
+      </p>
+    </div>
+  </body>
 </html>
