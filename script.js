@@ -89,6 +89,16 @@ showcaseButtons.forEach((button, index) => {
 
 const cards = [...document.querySelectorAll(".project-card")];
 const filterButtons = [...document.querySelectorAll("[data-filter]")];
+// Derive catalogue totals from the rendered cards so additions stay consistent.
+filterButtons.forEach((button) => {
+  const total = cards.filter(
+    (card) =>
+      button.dataset.filter === "all" ||
+      card.dataset.category === button.dataset.filter,
+  ).length;
+  button.querySelector("span").textContent = String(total).padStart(2, "0");
+});
+
 function filterProjects(category) {
   let count = 0;
   cards.forEach((card) => {
